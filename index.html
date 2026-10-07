@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
 <title>세미나 신청 — 하이픽셀플러스</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -112,6 +113,25 @@ select option{background:#1c1c1f;}
 .cancel-success h3{font-size:20px;font-weight:700;margin-bottom:10px;}
 .cancel-success p{font-size:14px;color:var(--text2);line-height:1.7;}
 .c-error{font-size:14px;color:rgba(240,80,64,0.8);text-align:center;margin-top:12px;display:none;line-height:1.6;}
+.attendance-panel{display:none;}
+.attendance-panel.show{display:block;}
+.attendance-step{display:none;}
+.attendance-step.show{display:block;}
+.attendance-current{font-size:13px;color:var(--text2);margin-top:10px;line-height:1.6;}
+.attendance-phone{font-size:16px;letter-spacing:.5px;color:var(--text2);margin:10px 0 14px;}
+.attendance-info-actions{display:grid;gap:12px;margin-top:24px;}
+.attendance-info-actions .cancel-back-btn{width:100%;padding:14px;border:1px solid var(--border);}
+.attendance-steps{font-size:12px;letter-spacing:.5px;color:var(--text2);margin-bottom:18px;}
+.attendance-steps strong{color:var(--accent);}
+.attendance-name-note{display:none;margin-top:12px;padding:10px 12px;border:1px solid rgba(245,196,81,.25);background:rgba(245,196,81,.07);color:#f5c451;font-size:12px;line-height:1.65;border-radius:3px;}
+.attendance-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;}
+.attendance-choice{width:100%;padding:16px;border-radius:3px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .15s,transform .15s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.attendance-choice:hover:not(:disabled){opacity:.88;transform:translateY(-1px);}
+.attendance-choice:disabled{opacity:.4;cursor:not-allowed;}
+.attendance-choice.yes{background:#4ade80;border:1px solid #4ade80;color:#07150c;}
+.attendance-choice.no{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.5);color:#fca5a5;}
+.attendance-contact{margin-top:24px;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:3px;text-align:center;font-size:13px;color:var(--text2);line-height:1.7;}
+.attendance-contact a{display:inline-block;margin-top:7px;color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(243,146,0,.45);}
 .closed-box{text-align:center;padding:60px 24px;}
 .closed-icon{font-size:40px;margin-bottom:20px;}
 .closed-box h3{font-size:22px;font-weight:700;margin-bottom:12px;}
@@ -133,22 +153,22 @@ select option{background:#1c1c1f;}
     <div class="left-bg"></div>
     <div class="deco-ring"></div>
     <div class="left-inner">
-      <div class="left-tag">스위처를 운용하고 활용하여 스트리밍까지 직접 체험까지</div>
-      <div class="left-eyebrow">Blackmagic Design</div>
+      <div class="left-tag"><span data-se-text="tag" style="">스위처를 운용하고 활용하여 스트리밍까지 직접 체험까지</span></div>
+      <div class="left-eyebrow"><span data-se-text="eyebrow" style="">Blackmagic Design</span></div>
       <h1 class="left-title">
-        ATEM &<br>STREAMING<br>교육 <span class="left-title-models"></span>
-        <span class="sub">라이브 및 스트리밍 중계 무료 교육</span>
+        <span data-se-text="titleMain" style="">ATEM &<br>STREAMING<br>교육</span> <span class="left-title-models"><span data-se-text="titleModels" style=""></span></span>
+        <span class="sub"><span data-se-text="titleSub" style="">라이브 및 스트리밍 중계 무료 교육</span></span>
       </h1>
-      <p class="left-desc">본 세미나는 Blackmagic Design의 ATEM 스위처 시리즈를 중심으로 장비 설정부터 실전 운용까지 체계적으로 <br>교육하며, 중계용 카메라와 스트리밍 인코더·디코더 활용법도 함께 다룹니다. 라이브 환경 구축부터 장비 선택까지, 현장의 궁금증을 한 번에 해소할 수 있는 자리입니다.</p>
-      <div class="meta-list"><div class="meta-row"><span class="meta-row-label">일자</span><span class="meta-row-value">8월 28일 (금) 오후</span></div><div class="meta-row"><span class="meta-row-label">시간</span><span class="meta-row-value"><span class="session-badge">오후</span> 14:00 – 17:00</span></div><div class="meta-row"><span class="meta-row-label">장소</span><span class="meta-row-value">하이픽셀플러스 세미나룸<small>경기도 안양시 동안구 벌말로 126, 오비즈타워 302호</small><small>🚇 4호선 인덕원역 4번출구 도보 10분</small><small>📞 031-450-3515</small></span></div><div class="meta-row"><span class="meta-row-label">시연장비</span><span class="meta-row-value">ATEM Constellation 8K<br>ATEM 1 M/E Advanced Panel<br>ATEM Camera Control Panel<br>Blackmagic URSA Broadcast G2<br>Blackmagic Streaming Encoder 4K<br>Blackmagic Streaming Decoder 4K</span></div></div>
+      <p class="left-desc"><span data-se-text="desc" style="">본 세미나는 Blackmagic Design의 ATEM 스위처 시리즈를 중심으로 장비 설정부터 실전 운용까지 체계적으로 <br>교육하며, 중계용 카메라와 스트리밍 인코더·디코더 활용법도 함께 다룹니다. 라이브 환경 구축부터 장비 선택까지, 현장의 궁금증을 한 번에 해소할 수 있는 자리입니다.</span></p>
+      <div class="meta-list"><div class="meta-row"><span class="meta-row-label"><span data-se-text="meta.1.label" style="">일자</span></span><span class="meta-row-value"><span data-se-text="meta.1.main" style="">8월 28일 (금) 오후</span></span></div><div class="meta-row"><span class="meta-row-label"><span data-se-text="meta.2.label" style="">시간</span></span><span class="meta-row-value"><span class="session-badge">오후</span> <span data-se-text="meta.2.pmTime" style="">14:00 – 17:00</span></span></div><div class="meta-row"><span class="meta-row-label"><span data-se-text="meta.3.label" style="">장소</span></span><span class="meta-row-value"><span data-se-text="meta.3.main" style="">하이픽셀플러스 세미나룸</span><small><span data-se-text="meta.3.small.0" style="">경기도 안양시 동안구 벌말로 126, 오비즈타워 302호</span></small><small><span data-se-text="meta.3.small.1" style="">🚇 4호선 인덕원역 4번출구 도보 10분</span></small><small><span data-se-text="meta.3.small.2" style="">📞 031-450-3515</span></small></span></div><div class="meta-row"><span class="meta-row-label"><span data-se-text="meta.4.label" style="">시연장비</span></span><span class="meta-row-value"><span data-se-text="meta.4.main" style="">ATEM Constellation 8K<br>ATEM 1 M/E Advanced Panel<br>ATEM Camera Control Panel<br>Blackmagic URSA Broadcast G2<br>Blackmagic Streaming Encoder 4K<br>Blackmagic Streaming Decoder 4K</span></span></div></div>
     </div>
-    <div class="left-footer">Blackmagic Design 공식 총판 · 하이픽셀플러스<br>문의: hipixelplus@naver.com / 031-450-3515</div>
+    <div class="left-footer"><span data-se-text="ui.footerBrand" style="">Blackmagic Design 공식 총판 · 하이픽셀플러스</span><br>문의: <span data-se-text="footerContact" style="">hipixelplus@naver.com / 031-450-3515</span></div>
   </div>
   <div class="right">
     <div id="form-body">
       <div class="tab-bar">
-        <button class="tab-btn active" id="tab-apply" onclick="switchTab('apply')" type="button">참가 신청</button>
-        <button class="tab-btn" id="tab-cancel" onclick="switchTab('cancel')" type="button">신청 취소</button>
+        <button class="tab-btn active" id="tab-apply" onclick="switchTab('apply')" type="button"><span data-se-text="ui.applyTab" style="">참가 신청</span></button>
+        <button class="tab-btn" id="tab-cancel" onclick="switchTab('cancel')" type="button"><span data-se-text="ui.cancelTab" style="">신청 취소</span></button>
       </div>
 
       <!-- ══ 신청 패널 ══ -->
@@ -157,48 +177,48 @@ select option{background:#1c1c1f;}
           <div class="closed-icon">🙏</div>
           <div class="closed-badge">접수 마감</div>
           <h3>신청 접수가 마감되었습니다</h3>
-          <p>🙏 많은 관심 감사합니다! 접수가 마감되었습니다.</p>
+          <p><span data-se-text="closedMsg" style="">🙏 많은 관심 감사합니다! 접수가 마감되었습니다.</span></p>
         </div>
         <div id="apply-form">
           <div class="form-header">
-            <h2>참가 신청</h2>
-            <p>아래 정보를 입력해 주시면 확인 후 개별 연락드립니다.</p>
+            <h2><span data-se-text="formTitle" style="">참가 신청</span></h2>
+            <p><span data-se-text="formSubtitle" style="">아래 정보를 입력해 주시면 확인 후 개별 연락드립니다.</span></p>
           </div>
-          <div class="notice"><div class="notice-item"><div class="notice-dot"></div><span>본 교육은 사전 예약제로 운영되며, 사전 예약자에 한해 참석이 가능합니다.</span></div><div class="notice-item"><div class="notice-dot"></div><span>원활한 운영을 위해 참석이 어려우신 경우에는 사전에 예약 취소를 요청드리오니 <BR>협조 부탁드립니다.</span></div><div class="notice-item"><div class="notice-dot"></div><span>건물 주차장 이용 시 주차 지원이 가능합니다.</span></div></div>
+          <div class="notice"><div class="notice-item"><div class="notice-dot"></div><span data-se-text="notice.0" style="">본 교육은 사전 예약제로 운영되며, 사전 예약자에 한해 참석이 가능합니다.</span></div><div class="notice-item"><div class="notice-dot"></div><span data-se-text="notice.1" style="">원활한 운영을 위해 참석이 어려우신 경우에는 사전에 예약 취소를 요청드리오니 <BR>협조 부탁드립니다.</span></div><div class="notice-item"><div class="notice-dot"></div><span data-se-text="notice.2" style="">건물 주차장 이용 시 주차 지원이 가능합니다.</span></div></div>
           
           <div class="field-row">
-            <div class="field"><label>이름 <span class="req">*</span></label><input type="text" id="f-name" placeholder="홍길동" autocomplete="name"></div>
-            <div class="field"><label>전화번호 <span class="req">*</span></label><input type="tel" id="f-phone" placeholder="010-0000-0000" autocomplete="tel" oninput="formatPhone(this)" maxlength="13"></div>
+            <div class="field"><label><span data-se-text="fixed.name.label" style="">이름</span> <span class="req">*</span></label><input type="text" id="f-name" data-se-placeholder="fixed.name.placeholder" style="" placeholder="홍길동" autocomplete="name"></div>
+            <div class="field"><label><span data-se-text="fixed.phone.label" style="">전화번호</span> <span class="req">*</span></label><input type="tel" id="f-phone" data-se-placeholder="fixed.phone.placeholder" style="" placeholder="010-0000-0000" autocomplete="tel" oninput="formatPhone(this)" maxlength="13"></div>
           </div>
-          <div class="field"><label>이메일 <span class="req">*</span></label><input type="email" id="f-email" placeholder="이메일 주소" autocomplete="email"></div>
-          <div class="field"><label>직장 또는 소속 <span class="req">*</span></label><input type="text" id="f-company" placeholder="직장 또는 소속"></div>
-          <div class="field"><label>교육 통해 배우시고 싶은 부분이 있나요?</label><input type="text" id="cf-21" placeholder=""></div>
+          <div class="field"><label><span data-se-text="fixed.email.label" style="">이메일</span> <span class="req">*</span></label><input type="email" id="f-email" data-se-placeholder="fixed.email.placeholder" style="" placeholder="이메일 주소" autocomplete="email"></div>
+          <div class="field"><label><span data-se-text="fixed.company.label" style="">직장 또는 소속</span> <span class="req">*</span></label><input type="text" id="f-company" data-se-placeholder="fixed.company.placeholder" style="" placeholder="직장 또는 소속"></div>
+          <div class="field"><label><span data-se-text="custom.21.label" style="">교육 통해 배우시고 싶은 부분이 있나요?</span></label><input data-se-placeholder="custom.21.placeholder" style="" type="text" id="cf-21" placeholder=""></div>
           <div class="field">
-            <label>참가 일시 <span class="req">*</span></label>
-            <div class="time-options" style="grid-template-columns:1fr;"><div class="time-option"><input type="radio" name="session" id="session-4" value="8월 28일 (금) 오후 14:00 – 17:00"><label for="session-4"><span class="time-label-title">8월 28일 (금) 오후</span><span class="time-label-sub">14:00 – 17:00</span><span class="slot-avail-badge" id="slot-avail-4"></span></label></div></div>
+            <label><span data-se-text="ui.sessionHeading" style="">참가 일시</span> <span class="req">*</span></label>
+            <div class="time-options" style="grid-template-columns:1fr;"><div class="time-option"><input type="radio" name="session" id="session-4" value="8월 28일 (금) 오후 14:00 – 17:00"><label for="session-4"><span class="time-label-title"><span data-se-text="session.4.label" style="">8월 28일 (금) 오후</span></span><span class="time-label-sub"><span data-se-text="session.4.time" style="">14:00 – 17:00</span></span><span class="slot-avail-badge" id="slot-avail-4"></span></label></div></div>
           </div>
           <div class="field">
-            <label>이메일 수신 동의 <span style="color:var(--text3);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:400">(선택)</span></label>
+            <label><span data-se-text="ui.emailHeading" style="">이메일 수신 동의</span> <span style="color:var(--text3);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:400">(선택)</span></label>
             <div class="consent-options">
-              <div class="consent-option"><input type="radio" name="email-consent" id="consent-yes" value="동의"><label for="consent-yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>예, 동의합니다</label></div>
-              <div class="consent-option"><input type="radio" name="email-consent" id="consent-no" value="미동의"><label for="consent-no">아니요</label></div>
+              <div class="consent-option"><input type="radio" name="email-consent" id="consent-yes" value="동의"><label for="consent-yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-se-text="ui.emailYes" style="">예, 동의합니다</span></label></div>
+              <div class="consent-option"><input type="radio" name="email-consent" id="consent-no" value="미동의"><label for="consent-no"><span data-se-text="ui.emailNo" style="">아니요</span></label></div>
             </div>
           </div>
           <div class="field photo-consent-field">
             <fieldset class="photo-consent-box">
-              <legend class="photo-consent-heading">사진 및 영상 촬영·활용 동의 <span class="req">*</span></legend>
-              <p class="photo-consent-copy" id="photo-consent-description">본 행사는 사진 및 영상 촬영이 진행되며, 촬영된 자료는 Blackmagic Design의 행사 홍보 및 마케팅 목적으로 공식 홈페이지, SNS(Instagram, Facebook 등) 및 기타 홍보자료에 활용될 수 있습니다.</p>
+              <legend class="photo-consent-heading"><span data-se-text="photoConsentTitle" style="">사진 및 영상 촬영·활용 동의</span> <span class="req">*</span></legend>
+              <p class="photo-consent-copy" id="photo-consent-description"><span data-se-text="photoConsentText" style="">본 행사는 사진 및 영상 촬영이 진행되며, 촬영된 자료는 Blackmagic Design의 행사 홍보 및 마케팅 목적으로 공식 홈페이지, SNS(Instagram, Facebook 등) 및 기타 홍보자료에 활용될 수 있습니다.</span></p>
               <div class="consent-options photo-consent-options">
-                <div class="consent-option"><input type="radio" name="photo-consent" id="photo-consent-yes" value="동의" aria-describedby="photo-consent-description" required><label for="photo-consent-yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>예, 동의합니다</label></div>
-                <div class="consent-option"><input type="radio" name="photo-consent" id="photo-consent-no" value="미동의" aria-describedby="photo-consent-description" required><label for="photo-consent-no">아니요</label></div>
+                <div class="consent-option"><input type="radio" name="photo-consent" id="photo-consent-yes" value="동의" aria-describedby="photo-consent-description" required><label for="photo-consent-yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-se-text="ui.photoYes" style="">예, 동의합니다</span></label></div>
+                <div class="consent-option"><input type="radio" name="photo-consent" id="photo-consent-no" value="미동의" aria-describedby="photo-consent-description" required><label for="photo-consent-no"><span data-se-text="ui.photoNo" style="">아니요</span></label></div>
               </div>
             </fieldset>
           </div>
           <div class="agree">
             <input type="checkbox" id="f-agree">
-            <label for="f-agree" class="agree-text" style="margin:0;cursor:pointer"><strong>개인정보 수집 및 이용에 동의합니다.</strong><br>수집된 정보(이름, 연락처, 이메일, 소속)는 세미나 운영 목적으로만 사용되며, 행사 중 촬영된 사진·영상이 SNS 등 온라인 채널에 게시될 수 있습니다.</label>
+            <label for="f-agree" class="agree-text" style="margin:0;cursor:pointer"><strong><span data-se-text="ui.privacyHeading" style="">개인정보 수집 및 이용에 동의합니다.</span></strong><br><span data-se-text="agreeText" style="">수집된 정보(이름, 연락처, 이메일, 소속)는 세미나 운영 목적으로만 사용되며, 행사 중 촬영된 사진·영상이 SNS 등 온라인 채널에 게시될 수 있습니다.</span></label>
           </div>
-          <button class="submit-btn" id="submit-btn" type="button" disabled>접수가 마감되었습니다</button>
+          <button class="submit-btn" id="submit-btn" type="button"><span data-se-text="ui.submitLabel" style="">신청 완료하기</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <p class="submit-note">수집된 정보는 세미나 운영 목적으로만 사용됩니다</p>
         </div>
       </div>
@@ -207,58 +227,148 @@ select option{background:#1c1c1f;}
       <div class="cancel-panel" id="cancel-panel">
         <div class="cancel-step show" id="cancel-step1">
           <div class="form-header">
-            <h2>예약 취소</h2>
-            <p>신청 시 입력하신 전화번호로 예약을 조회합니다.</p>
+            <h2><span data-se-text="ui.cancelTitle" style="">예약 취소</span></h2>
+            <p><span data-se-text="ui.cancelIntro" style="">신청 시 입력하신 전화번호로 예약을 조회합니다.</span></p>
           </div>
           <div class="field">
             <label>전화번호 <span class="req">*</span></label>
             <input type="tel" id="c-phone" placeholder="010-0000-0000" autocomplete="tel" oninput="formatPhone(this)" maxlength="13">
           </div>
           <button class="submit-btn" id="lookup-btn" type="button" onclick="lookupReservation()">
-            예약 조회하기
+            <span data-se-text="ui.cancelLookup" style="">예약 조회하기</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <p class="c-error" id="c-lookup-error"></p>
         </div>
         <div class="cancel-step" id="cancel-step2">
           <div class="form-header">
-            <h2>예약 확인</h2>
-            <p>아래 예약 정보를 확인 후 취소해 주세요.</p>
+            <h2><span data-se-text="ui.cancelConfirmTitle" style="">예약 확인</span></h2>
+            <p><span data-se-text="ui.cancelConfirmIntro" style="">아래 예약 정보를 확인 후 취소해 주세요.</span></p>
           </div>
           <div class="reservation-card">
             <div class="reservation-card-label">예약 정보</div>
             <div class="reservation-card-name" id="c-res-name"></div>
+            <div class="field" id="c-session-picker" style="display:none;margin-top:16px"><label for="c-session-select">취소할 신청 타임</label><select id="c-session-select" onchange="selectCancelReservation()"></select></div>
             <div class="reservation-card-session">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="2" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M1 6h12M4.5 1v2M9.5 1v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
               <span id="c-res-session-text"></span>
             </div>
           </div>
-          <button class="cancel-btn" id="confirm-cancel-btn" type="button" onclick="confirmCancel()">이 예약을 취소합니다</button>
+          <button class="cancel-btn" id="confirm-cancel-btn" type="button" onclick="confirmCancel()"><span data-se-text="ui.cancelAction" style="">이 예약을 취소합니다</span></button>
           <button class="cancel-back-btn" type="button" onclick="resetCancel()">돌아가기</button>
         </div>
         <div class="cancel-step" id="cancel-step3">
           <div class="cancel-success">
             <div class="cancel-success-icon">✓</div>
-            <h3>취소가 완료되었습니다</h3>
-            <p>예약이 정상적으로 취소되었습니다.<br>다시 신청하시려면 신청 탭으로 이동해 주세요.</p>
+            <h3><span data-se-text="ui.cancelDoneTitle" style="">취소가 완료되었습니다</span></h3>
+            <p><span data-se-text="ui.cancelDoneText" style="">예약이 정상적으로 취소되었습니다.<br>다시 신청하시려면 신청 탭으로 이동해 주세요.</span></p>
             <button class="submit-btn" type="button" onclick="switchTab('apply')" style="margin-top:28px;">다시 신청하기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
+        </div>
+      </div>
+
+      <!-- 주소에 ?attendance=1이 있을 때만 표시되는 사전 참석 확인 패널 -->
+      <div class="attendance-panel" id="attendance-panel">
+        <div class="attendance-step" id="attendance-step0">
+          <div class="form-header"><h2>신청 정보 확인</h2><p id="attendance-link-status" role="status" aria-live="polite"></p></div>
+          <button class="cancel-back-btn" id="attendance-link-retry" type="button" onclick="resetAttendance()" style="display:none">다시 확인하기</button>
+        </div>
+        <div class="attendance-step show" id="attendance-step1">
+          <div class="form-header">
+            <h2><span data-se-text="attendanceTitle" style="">참석 여부 확정</span></h2>
+            <p><span data-se-text="attendanceText" style="">알림톡으로 안내를 받으신 분은 이름과 전화번호로 신청 내역을 찾아주세요. 본인 정보가 맞는지 확인한 후 참석 여부를 선택할 수 있습니다.</span></p>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="a-name">이름 <span class="req">*</span></label><input type="text" id="a-name" placeholder="신청자 이름" autocomplete="name"></div>
+            <div class="field"><label for="a-phone">전화번호 <span class="req">*</span></label><input type="tel" id="a-phone" placeholder="010-0000-0000" autocomplete="tel" oninput="formatPhone(this)" maxlength="13"></div>
+          </div>
+          <button class="submit-btn" id="attendance-lookup-btn" type="button" onclick="lookupAttendance()"><span data-se-text="ui.attendanceLookup" style="">신청 정보 확인하기</span></button>
+          <p class="c-error" id="attendance-error" role="alert"></p>
+        </div>
+        <div class="attendance-step" id="attendance-step4">
+          <div class="attendance-steps"><strong>1. 신청 정보 확인</strong> &nbsp; / &nbsp; 2. 참석 여부 선택</div>
+          <div class="form-header"><h2><span data-se-text="ui.attendanceMatchTitle" style="">신청 정보가 맞나요?</span></h2><p><span data-se-text="ui.attendanceMatchIntro" style="">아래 정보가 본인 신청 내역인지 확인해주세요. 아직 참석 여부는 저장되지 않았습니다.</span></p></div>
+          <div class="reservation-card">
+            <div class="reservation-card-label">신청자</div><div class="reservation-card-name" id="a-match-name"></div>
+            <div class="attendance-phone" id="a-match-phone"></div>
+            <div class="field" id="a-session-picker" style="display:none;margin-top:16px"><label for="a-session-select">참석 여부를 응답할 신청 타임</label><select id="a-session-select" onchange="selectAttendanceReservation()"></select></div>
+            <div class="reservation-card-label">신청 회차</div><div class="reservation-card-session" id="a-match-session"></div>
+            <div class="attendance-current" id="a-match-response"></div>
+            <div class="attendance-name-note" id="a-name-match-note">입력하신 이름과 다르지만 전화번호가 일치하는 신청 내역입니다. 본인 신청이 맞는지 먼저 확인해주세요.</div>
+          </div>
+          <div class="attendance-info-actions">
+            <button class="submit-btn" type="button" onclick="confirmAttendanceInfo()"><span data-se-text="ui.attendanceInfoYes" style="">제 정보가 맞습니다</span></button>
+            <button class="cancel-back-btn" type="button" onclick="rejectAttendanceInfo()"><span data-se-text="ui.attendanceInfoNo" style="">제 정보가 아닙니다</span></button>
+          </div>
+        </div>
+        <div class="attendance-step" id="attendance-step5">
+          <div class="form-header"><h2><span data-se-text="ui.attendanceMismatchTitle" style="">본인 정보가 아닌가요?</span></h2><p><span data-se-text="ui.attendanceMismatchText" style="">참석 여부를 저장하지 않았습니다. 본인에게 전달된 링크인지 확인해주세요. 정보가 다르거나 수정이 필요하면 아래 카카오톡으로 문의해주세요.</span></p></div>
+          <button class="cancel-back-btn" type="button" onclick="resetAttendance()">신청 정보 다시 확인하기</button>
+        </div>
+        <div class="attendance-step" id="attendance-step2">
+          <div class="attendance-steps">1. 신청 정보 확인 &nbsp; / &nbsp; <strong>2. 참석 여부 선택</strong></div>
+          <div class="form-header">
+            <h2><span data-se-text="ui.attendanceChooseTitle" style="">참석 여부를 선택해주세요</span></h2>
+            <p><span data-se-text="ui.attendanceChooseIntro" style="">선택 내용은 다시 접속해 변경할 수 있습니다.</span></p>
+          </div>
+          <div class="reservation-card">
+            <div class="reservation-card-label">신청 정보</div>
+            <div class="reservation-card-name" id="a-res-name"></div>
+            <div class="attendance-phone" id="a-res-phone"></div>
+            <div class="reservation-card-session"><span id="a-res-session"></span></div>
+            <div class="attendance-current" id="a-current-response"></div>
+          </div>
+          <div class="attendance-actions">
+            <button class="attendance-choice yes" type="button" onclick="saveAttendance('참석')"><span data-se-text="ui.attendanceYes" style="">참석을 확정합니다</span></button>
+            <button class="attendance-choice no" type="button" onclick="saveAttendance('불참')"><span data-se-text="ui.attendanceNo" style="">참석하지 않습니다</span></button>
+          </div>
+          <p class="attendance-current" id="attendance-saving" role="status" aria-live="polite"></p>
+          <p class="c-error" id="attendance-save-error" role="alert"></p>
+          <button class="cancel-back-btn" type="button" onclick="resetAttendance()" style="margin-top:10px;">신청 정보 다시 확인하기</button>
+        </div>
+        <div class="attendance-step" id="attendance-step3">
+          <div class="cancel-success">
+            <div class="cancel-success-icon">✓</div>
+            <h3 id="attendance-result-title">응답이 저장되었습니다</h3>
+            <p><span data-se-text="attendanceSuccessText" style="">참석 여부가 정상적으로 저장되었습니다. 응답해 주셔서 감사합니다.</span></p>
+            <button class="cancel-back-btn" type="button" onclick="resetAttendance()" style="margin-top:24px;">응답 변경하기</button>
+          </div>
+        </div>
+        <div class="attendance-contact">
+          <span data-se-text="attendanceContactText" style="">궁금한 점이 있으시면 카카오톡 플러스친구로 문의해주세요.</span>
+          <br><a href="http://pf.kakao.com/_wuWAn" target="_blank" rel="noopener noreferrer"><span data-se-text="ui.contactLink" style="">카카오톡 플러스친구 문의하기 ↗</span></a>
         </div>
       </div>
     </div>
 
     <div class="success" id="msg-success">
       <div class="success-icon">✓</div>
-      <h3>신청해 주셔서 감사합니다!</h3>
-      <p>검토 후 참가 확정 안내를 입력하신 연락처로 개별 연락드리겠습니다.</p>
+      <h3><span data-se-text="successTitle" style="">신청해 주셔서 감사합니다!</span></h3>
+      <p><span data-se-text="successMsg" style="">검토 후 참가 확정 안내를 입력하신 연락처로 개별 연락드리겠습니다.</span></p>
     </div>
   </div>
 </div>
 <script>
-var SCRIPT_URL='https://script.google.com/macros/s/AKfycbxY_5sluimI4J6-wj8KO7QxQAIweosU23Gx7_iiBQ0mMc55YEoNtVHdQMbj-G-a4wT0KA/exec';
+var SCRIPT_URL="https://script.google.com/macros/s/AKfycbxY_5sluimI4J6-wj8KO7QxQAIweosU23Gx7_iiBQ0mMc55YEoNtVHdQMbj-G-a4wT0KA/exec";
+var REGISTRATION_SHEET_ID="";
+var registrationReady=null;
+async function registrationRequest(action,payload){
+  var suffix=REGISTRATION_SHEET_ID?'&sheetId='+encodeURIComponent(REGISTRATION_SHEET_ID):'';
+  if(REGISTRATION_SHEET_ID){
+    if(!registrationReady)registrationReady=fetch(SCRIPT_URL+'?action=getSheetInfo'+suffix).then(function(r){return r.json();}).then(function(info){
+      if(!info.ok||!(info.capabilities||[]).includes('registration-tabs-v1')||String(info.sheetId)!==REGISTRATION_SHEET_ID)throw new Error('접수 탭 연결을 확인하지 못했습니다. 행사 담당자에게 문의해주세요.');
+    }).catch(function(error){registrationReady=null;throw error;});
+    await registrationReady;
+  }
+  if(payload)return fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(Object.assign({},payload,{action:action,sheetId:REGISTRATION_SHEET_ID}))});
+  return fetch(SCRIPT_URL+'?action='+action+suffix);
+}
 var MAX_PER_SLOT=999;
-var REGISTRATION_STATUS='closed';
-var SESSIONS=[{"id":4,"key":"8월 28일 (금) 오후 14:00 – 17:00"}];
+var REGISTRATION_STATUS='open';
+var SESSIONS=[{"id":4,"key":"8월 28일 (금) 오후 14:00 – 17:00","legacyKeys":[]}];
+var BUTTON_HTML={};
+['submit-btn','lookup-btn','confirm-cancel-btn','attendance-lookup-btn'].forEach(function(id){var button=document.getElementById(id);if(button)BUTTON_HTML[id]=button.innerHTML;});
+function restoreButton(id){var button=document.getElementById(id);if(button){button.disabled=false;button.innerHTML=BUTTON_HTML[id]||'';}}
 
 function formatPhone(el){var v=el.value.replace(/\D/g,'').slice(0,11);if(v.length<4)el.value=v;else if(v.length<8)el.value=v.slice(0,3)+'-'+v.slice(3);else el.value=v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7);}
 function getRadioValue(name){var c=document.querySelector('input[name="'+name+'"]:checked');return c?c.value:'';}
@@ -291,15 +401,159 @@ function switchTab(tab){
   }
 }
 
+function isAttendanceMode(){return new URLSearchParams(window.location.search).get('attendance')==='1';}
+function attendanceLinkedId(){return new URLSearchParams(window.location.search).get('rid')||'';}
+function showAttendanceStep(step){
+  [0,1,2,3,4,5].forEach(function(n){var el=document.getElementById('attendance-step'+n);if(el)el.classList.remove('show');});
+  var target=document.getElementById('attendance-step'+step);
+  if(target){target.classList.add('show');var heading=target.querySelector&&target.querySelector('h2,h3');if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}}
+}
+function openAttendanceMode(){
+  var tabBar=document.querySelector('.tab-bar');if(tabBar)tabBar.style.display='none';
+  var applyPanel=document.getElementById('apply-panel');if(applyPanel)applyPanel.classList.add('hide');
+  var cancelPanel=document.getElementById('cancel-panel');if(cancelPanel)cancelPanel.classList.remove('show');
+  var attendancePanel=document.getElementById('attendance-panel');if(attendancePanel)attendancePanel.classList.add('show');
+  return resetAttendance();
+}
+var attendanceName='',attendancePhone='',attendanceRegistrationId='',attendanceToken='';
+var attendanceReservations=[],attendanceMode='manual',attendanceInfoConfirmed=false,attendanceSaving=false,attendanceEpoch=0;
+async function attendanceFetchData(action,payload){
+  var timer;
+  try{
+    return await Promise.race([
+      registrationRequest(action,payload).then(function(response){if(response.ok===false)throw new Error('연결을 확인하지 못했습니다. 신청 정보를 다시 확인해주세요.');return response.json();}),
+      new Promise(function(resolve,reject){timer=setTimeout(function(){reject(new Error(payload?'저장 결과를 확인하지 못했습니다. 신청 정보 다시 확인하기로 현재 응답을 확인해주세요.':'신청 정보 조회가 지연되고 있습니다. 잠시 후 다시 확인해주세요.'));},25000);})
+    ]);
+  }finally{if(typeof clearTimeout==='function')clearTimeout(timer);}
+}
+function attendanceMaskPhone(value){var n=String(value||'').replace(/\D/g,'');return n.length>=10?n.slice(0,3)+'-****-'+n.slice(-4):'전화번호 확인 필요';}
+function selectAttendanceReservation(){
+  var index=Number(document.getElementById('a-session-select').value||0),item=attendanceReservations[index];
+  attendanceInfoConfirmed=false;
+  if(!item){attendanceRegistrationId='';return;}
+  attendanceRegistrationId=item.registrationId||'';
+  var name=(item.name||attendanceName)+' 님',phone=item.phoneMasked||attendanceMaskPhone(attendancePhone);
+  ['a-res-name','a-match-name'].forEach(function(id){document.getElementById(id).textContent=name;});
+  ['a-res-phone','a-match-phone'].forEach(function(id){document.getElementById(id).textContent=phone;});
+  ['a-res-session','a-match-session'].forEach(function(id){document.getElementById(id).textContent=item.session||'';});
+  ['a-current-response','a-match-response'].forEach(function(id){document.getElementById(id).textContent='현재 응답: '+(item.attendance||'미응답');});
+  document.getElementById('a-name-match-note').style.display=item.nameMatched===false?'block':'none';
+  document.getElementById('attendance-save-error').style.display='none';
+  showAttendanceStep(4);
+}
+function populateAttendance(items){
+  attendanceReservations=items;
+  var picker=document.getElementById('a-session-select');picker.textContent='';picker.value='';
+  items.forEach(function(item,i){var o=document.createElement('option');o.value=String(i);o.textContent=item.session;picker.appendChild(o);});
+  picker.value='0';
+  document.getElementById('a-session-picker').style.display=items.length>1?'block':'none';
+  selectAttendanceReservation();
+}
+function clearAttendanceRecord(){
+  attendanceName='';attendancePhone='';attendanceRegistrationId='';attendanceToken='';attendanceReservations=[];attendanceInfoConfirmed=false;
+  ['a-res-name','a-match-name','a-res-phone','a-match-phone','a-res-session','a-match-session','a-current-response','a-match-response'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent='';});
+  document.getElementById('a-session-select').textContent='';
+}
+async function resetAttendance(){
+  if(attendanceSaving)return;
+  var epoch=++attendanceEpoch;clearAttendanceRecord();
+  document.querySelectorAll('.attendance-choice').forEach(function(b){b.disabled=false;});
+  ['a-name','a-phone'].forEach(function(id){document.getElementById(id).value='';});
+  ['attendance-error','attendance-save-error'].forEach(function(id){document.getElementById(id).style.display='none';});
+  restoreButton('attendance-lookup-btn');
+  var id=attendanceLinkedId();
+  attendanceMode=id?'link':'manual';
+  if(id)return lookupLinkedAttendance(id,epoch);
+  showAttendanceStep(1);
+}
+async function lookupLinkedAttendance(id,epoch){
+  showAttendanceStep(0);
+  var status=document.getElementById('attendance-link-status'),retry=document.getElementById('attendance-link-retry');
+  status.textContent='신청 정보를 불러오는 중입니다. 잠시만 기다려주세요.';retry.style.display='none';
+  try{
+    var data=await attendanceFetchData('getAttendanceLink&registrationId='+encodeURIComponent(id));if(epoch!==attendanceEpoch)return;
+    if(!data.eligible)throw new Error(data.message||'개인 링크 조회를 사용할 수 없습니다. 행사 담당자에게 문의해주세요.');
+    if(data.capability!=='attendance-link-match-v1'||data.registrationId!==id||!data.confirmationToken||!data.phoneMasked)
+      throw new Error('개인 링크 정보를 확인하지 못했습니다. 행사 담당자에게 문의해주세요.');
+    attendanceToken=data.confirmationToken;attendanceName=data.name||'';
+    populateAttendance([data]);
+  }catch(e){
+    if(epoch!==attendanceEpoch)return;
+    clearAttendanceRecord();status.textContent=e.message||'확인 중 오류가 발생했습니다. 잠시 후 다시 확인해주세요.';retry.style.display='block';showAttendanceStep(0);
+  }
+}
+async function lookupAttendance(){
+  if(attendanceSaving)return;
+  var name=document.getElementById('a-name').value.trim(),phone=document.getElementById('a-phone').value.trim();
+  var error=document.getElementById('attendance-error'),button=document.getElementById('attendance-lookup-btn');error.style.display='none';
+  if(!name||!phone){error.textContent='이름과 전화번호를 모두 입력해주세요.';error.style.display='block';return;}
+  var epoch=++attendanceEpoch;clearAttendanceRecord();attendanceMode='manual';button.disabled=true;button.textContent='확인 중...';
+  try{
+    var action='getAttendanceEligibility&name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone);
+    var linkedId=attendanceLinkedId();if(linkedId)action+='&registrationId='+encodeURIComponent(linkedId);
+    var data=await attendanceFetchData(action);if(epoch!==attendanceEpoch)return;
+    if(!data.eligible)throw new Error(data.message||'참석 확인 대상인 신청 내역을 찾을 수 없습니다.');
+    var items=data.reservations||[data];if(!items.length||items.some(function(item){return !item.registrationId;}))throw new Error('신청 정보를 확인하지 못했습니다. 행사 담당자에게 문의해주세요.');
+    attendanceName=name;attendancePhone=phone;populateAttendance(items);
+  }catch(e){
+    if(epoch!==attendanceEpoch)return;
+    error.textContent=e.message||'확인 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.';error.style.display='block';restoreButton('attendance-lookup-btn');
+  }
+}
+function confirmAttendanceInfo(){
+  if(attendanceSaving||!attendanceRegistrationId||!attendanceReservations.length)return;
+  attendanceInfoConfirmed=true;
+  document.querySelectorAll('.attendance-choice').forEach(function(b){b.disabled=false;});
+  document.getElementById('attendance-save-error').style.display='none';showAttendanceStep(2);
+}
+function rejectAttendanceInfo(){
+  if(attendanceSaving)return;
+  ++attendanceEpoch;clearAttendanceRecord();showAttendanceStep(5);
+}
+async function saveAttendance(value){
+  if(attendanceSaving||!attendanceInfoConfirmed||!attendanceRegistrationId||['참석','불참'].indexOf(value)<0)return;
+  if(attendanceMode==='manual'&&(!attendanceName||!attendancePhone))return;
+  if(attendanceMode==='link'&&!attendanceToken)return;
+  var buttons=document.querySelectorAll('.attendance-choice'),error=document.getElementById('attendance-save-error');
+  attendanceSaving=true;buttons.forEach(function(b){b.disabled=true;});error.style.display='none';
+  document.getElementById('attendance-saving').textContent='응답을 저장하는 중입니다...';
+  try{
+    var action=attendanceMode==='link'?'updateAttendanceLink':'updateAttendance';
+    var payload=attendanceMode==='link'?{registrationId:attendanceRegistrationId,confirmationToken:attendanceToken,infoConfirmed:true,attendance:value}:
+      {name:attendanceName,phone:attendancePhone,registrationId:attendanceRegistrationId,attendance:value};
+    var data=await attendanceFetchData(action,payload);
+    if(data.result!=='ok'){
+      if(data.code==='MATCH_RECHECK_REQUIRED'){attendanceInfoConfirmed=false;attendanceToken='';}
+      throw new Error(data.message||'응답을 저장하지 못했습니다.');
+    }
+    attendanceInfoConfirmed=false;attendanceToken='';
+    document.getElementById('attendance-result-title').textContent=value==='참석'?'참석으로 응답했습니다':'불참으로 응답했습니다';showAttendanceStep(3);
+  }catch(e){
+    attendanceInfoConfirmed=false;attendanceToken='';
+    error.textContent=e.message||'저장 결과를 확인하지 못했습니다. 신청 정보를 다시 확인해주세요.';error.style.display='block';
+    buttons.forEach(function(b){b.disabled=!attendanceInfoConfirmed;});
+  }finally{
+    attendanceSaving=false;document.getElementById('attendance-saving').textContent='';
+  }
+}
+
 var foundPhone='';
+var cancelRegistrationId='';
+var cancelReservations=[];
+function selectCancelReservation(){
+  var item=cancelReservations[Number(document.getElementById('c-session-select').value||0)];if(!item)return;
+  cancelRegistrationId=item.registrationId||'';
+  document.getElementById('c-res-name').textContent=item.name+' 님';
+  document.getElementById('c-res-session-text').textContent=item.session;
+}
 function resetCancel(){
   ['cancel-step1','cancel-step2','cancel-step3'].forEach(function(id){document.getElementById(id).classList.remove('show');});
   document.getElementById('cancel-step1').classList.add('show');
   var cp=document.getElementById('c-phone');if(cp)cp.value='';
   var errEl=document.getElementById('c-lookup-error');if(errEl)errEl.style.display='none';
-  var lb=document.getElementById('lookup-btn');
-  if(lb){lb.disabled=false;lb.innerHTML='예약 조회하기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';}
+  restoreButton('lookup-btn');
   foundPhone='';
+  cancelRegistrationId='';cancelReservations=[];
 }
 
 async function lookupReservation(){
@@ -311,46 +565,51 @@ async function lookupReservation(){
   lb.disabled=true;
   lb.innerHTML='<span style="opacity:.6">조회 중...</span>';
   try{
-    var r=await fetch(SCRIPT_URL+'?action=getReservation&phone='+encodeURIComponent(phone));
+    var r=await registrationRequest('getReservation&phone='+encodeURIComponent(phone));
     var data=await r.json();
     if(data.found){
       foundPhone=phone;
-      document.getElementById('c-res-name').textContent=data.name+' 님';
-      document.getElementById('c-res-session-text').textContent=data.session;
+      cancelReservations=data.reservations||[data];
+      var picker=document.getElementById('c-session-select');picker.textContent='';
+      cancelReservations.forEach(function(item,i){var o=document.createElement('option');o.value=String(i);o.textContent=item.session;picker.appendChild(o);});
+      document.getElementById('c-session-picker').style.display=cancelReservations.length>1?'block':'none';
+      selectCancelReservation();
+      restoreButton('confirm-cancel-btn');
       document.getElementById('cancel-step1').classList.remove('show');
       document.getElementById('cancel-step2').classList.add('show');
     }else{
       errEl.textContent='해당 전화번호로 등록된 예약을 찾을 수 없습니다.';
       errEl.style.display='block';
-      lb.disabled=false;
-      lb.innerHTML='예약 조회하기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      restoreButton('lookup-btn');
     }
   }catch(e){
     errEl.textContent='조회 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.';
     errEl.style.display='block';
-    lb.disabled=false;
-    lb.innerHTML='예약 조회하기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    restoreButton('lookup-btn');
   }
 }
 
 async function confirmCancel(){
   if(!foundPhone)return;
   var cb=document.getElementById('confirm-cancel-btn');
+  if(cb.disabled)return;
   cb.disabled=true;cb.textContent='취소 처리 중...';
   try{
-    await fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'cancelReservation',phone:foundPhone})});
+    var response=await registrationRequest('cancelReservation',{phone:foundPhone,registrationId:cancelRegistrationId});
+    var data=await response.json();
+    if(!response.ok||data.result!=='ok'||data.found===false)throw new Error(data.message||'취소하지 못했습니다.');
     document.getElementById('cancel-step2').classList.remove('show');
     document.getElementById('cancel-step3').classList.add('show');
   }catch(e){
-    alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-    cb.disabled=false;cb.textContent='이 예약을 취소합니다';
+    alert(e.message||'오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    restoreButton('confirm-cancel-btn');
   }
 }
 
 function loadSlots(){
   var loadingEl=document.getElementById('slots-loading');
   if(loadingEl)loadingEl.style.display='flex';
-  fetch(SCRIPT_URL+'?action=getSlots')
+  registrationRequest('getSlots')
     .then(function(r){return r.json();})
     .then(function(counts){updateSlotBadges(counts);if(loadingEl)loadingEl.style.display='none';})
     .catch(function(){updateSlotBadges({});if(loadingEl)loadingEl.style.display='none';});
@@ -359,10 +618,10 @@ function loadSlots(){
 function updateSlotBadges(counts){
   SESSIONS.forEach(function(s){
     var badge=document.getElementById('slot-avail-'+s.id);
-    var inp=document.querySelector('input[value="'+s.key+'"]');
+    var inp=document.getElementById('session-'+s.id);
     if(!badge)return;
     if(inp&&inp.disabled)return;
-    var count=counts[s.key]||0;
+    var count=[s.key].concat(s.legacyKeys||[]).reduce(function(total,key){return total+(Number(counts[key])||0);},0);
     var avail=MAX_PER_SLOT-count;
     if(avail<=0){
       badge.textContent='마감';
@@ -400,33 +659,40 @@ async function submitForm(){
   if(!session){var tf=document.querySelector('.time-options');tf.style.outline='1px solid rgba(240,80,64,0.5)';tf.style.borderRadius='3px';setTimeout(function(){tf.style.outline='';},1500);return;}
   if(!photoConsent){var pcf=document.querySelector('.photo-consent-box');pcf.style.outline='1px solid rgba(240,80,64,0.6)';setTimeout(function(){pcf.style.outline='';},1500);return;}
   if(!agreed){var ae=document.querySelector('.agree');ae.style.borderColor='rgba(240,80,64,0.5)';setTimeout(function(){ae.style.borderColor='';},1500);return;}
-  var btn=document.getElementById('submit-btn');btn.disabled=true;btn.innerHTML='<span style="opacity:.6">제출 중...</span>';
+  var btn=document.getElementById('submit-btn');
+  if(btn.disabled||btn.getAttribute('data-submitting')==='1'){return;}
+  btn.setAttribute('data-submitting','1');btn.disabled=true;btn.innerHTML='<span style="opacity:.6">제출 중...</span>';
   try{
-    await fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'submit',name:name,phone:phone,email:email,company:company,"교육 통해 배우시고 싶은 부분이 있나요?":cf_21,session:session,emailConsent:consent,photoConsent:photoConsent,timestamp:new Date().toLocaleString('ko-KR')})});
+    var response=await registrationRequest('submit',{name:name,phone:phone,email:email,company:company,"교육 통해 배우시고 싶은 부분이 있나요?":cf_21,session:session,emailConsent:consent,photoConsent:photoConsent,timestamp:new Date().toLocaleString('ko-KR')});
+    var result=await response.json();
+    if(!response.ok||result.result==='error'){throw new Error(result.message||'신청을 저장하지 못했습니다.');}
+    if(result.duplicate){
+      var successBox=document.getElementById('msg-success');
+      var successTitle=successBox.querySelector('h3');
+      var successMessage=successBox.querySelector('p');
+      if(successTitle){successTitle.textContent='이미 신청되어 있습니다.';}
+      if(successMessage){successMessage.textContent=result.message||'같은 일정의 기존 신청 한 건을 유지했습니다.';}
+    }
     document.getElementById('form-body').style.display='none';
     document.getElementById('msg-success').classList.add('show');
   }catch(e){
-    alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-    btn.disabled=false;btn.innerHTML='신청 완료하기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    alert(e&&e.message?e.message:'오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    btn.removeAttribute('data-submitting');restoreButton('submit-btn');
   }
 }
 
 function shake(){var f=document.getElementById('apply-panel');f.style.transition='transform .08s';f.style.transform='translateX(-6px)';setTimeout(function(){f.style.transform='translateX(5px)';},80);setTimeout(function(){f.style.transform='translateX(-4px)';},160);setTimeout(function(){f.style.transform='translateX(0)';},240);}
 
 document.addEventListener('DOMContentLoaded',function(){
+  if(isAttendanceMode()){openAttendanceMode();return;}
   if(REGISTRATION_STATUS!=='open'){applyRegistrationState();}
   else{loadSlots();}
   var btn=document.getElementById('submit-btn');
   if(btn&&!btn.disabled){
     btn.addEventListener('click',function(e){e.preventDefault();submitForm();});
-    btn.addEventListener('touchend',function(e){e.preventDefault();submitForm();});
   }
-  var lb=document.getElementById('lookup-btn');
-  if(lb){lb.addEventListener('touchend',function(e){e.preventDefault();lookupReservation();});}
-  var cb=document.getElementById('confirm-cancel-btn');
-  if(cb){cb.addEventListener('touchend',function(e){e.preventDefault();confirmCancel();});}
 });
 </script>
-<!-- EDITOR_DATA:{"publishTarget":"atem","scriptUrl":"https://script.google.com/macros/s/AKfycbxY_5sluimI4J6-wj8KO7QxQAIweosU23Gx7_iiBQ0mMc55YEoNtVHdQMbj-G-a4wT0KA/exec","bgImage":"https://images.blackmagicdesign.com/images/products/atemconstellation/landing/multiview/multiview-md.jpg?_v=1650498653","bgOpacity":45,"bgSize":200,"bgPosX":100,"bgPosY":0,"registrationStatus":"closed","closed":true,"scheduledMsg":"신청 접수 시작 전입니다. 오픈까지 잠시만 기다려주세요.","closedMsg":"🙏 많은 관심 감사합니다! 접수가 마감되었습니다.","maxPerSlot":999,"tagColor":"#b6fc53","tagSize":13,"subColor":"#b6fc53","eyebrowColor":"rgba(255,255,255,0.35)","eyebrowSize":25,"titleColor":"#f5f4f2","titleSize":96,"titleModelsColor":"#ffffff","titleModelsSize":96,"titleSubSize":17,"metaLabelColor":"rgba(255,255,255,0.45)","metaLabelSize":12,"metaValueColor":"#ffffff","metaValueSize":15,"metaSmallColor":"rgba(255,255,255,0.4)","metaSmallSize":13,"descColor":"#ffffff","descSize":14,"footerColor":"rgba(255,255,255,0.4)","footerSize":15,"formTitleSize":25,"formTitleColor":"#f5f4f2","formSubtitleSize":16,"formSubtitleColor":"#ffffff","fieldLabelSize":11,"fieldLabelColor":"rgba(255,255,255,0.5)","fieldInputSize":15,"fieldInputColor":"#f5f4f2","noticeSize":15,"noticeColor":"rgba(255,255,255,0.7)","agreeLabelSize":15,"agreeLabelColor":"#888785","benefitTitleSize":12,"benefitTitleColor":"#f39200","benefitNameSize":15,"benefitNameColor":"#f5f4f2","benefitSubSize":13,"benefitSubColor":"#888785","sessionTitleSize":15,"sessionTitleColor":"#f5f4f2","sessionSubSize":12,"sessionSubColor":"#888785","tabTextSize":14,"tabTextColor":"#f5f4f2","consentTextSize":14,"consentTextColor":"#888785","photoConsentDescSize":13,"photoConsentDescColor":"#b8b7b4","buttonTextSize":15,"buttonTextColor":"#0c0c0d","submitNoteSize":14,"submitNoteColor":"#444342","tag":"스위처를 운용하고 활용하여 스트리밍까지 직접 체험까지","eyebrow":"Blackmagic Design","titleMain":"ATEM &\nSTREAMING\n교육","titleModels":"","titleSub":"라이브 및 스트리밍 중계 무료 교육","desc":"본 세미나는 Blackmagic Design의 ATEM 스위처 시리즈를 중심으로 장비 설정부터 실전 운용까지 체계적으로 \n교육하며, 중계용 카메라와 스트리밍 인코더·디코더 활용법도 함께 다룹니다. 라이브 환경 구축부터 장비 선택까지, 현장의 궁금증을 한 번에 해소할 수 있는 자리입니다.","metaRows":[{"id":1,"label":"일자","type":"text","main":"8월 28일 (금) 오후","smalls":[],"accent":false},{"id":2,"label":"시간","type":"time","showAm":false,"showPm":true,"amTime":"10:00 – 13:00","pmTime":"14:00 – 17:00","smalls":[],"accent":false},{"id":3,"label":"장소","type":"text","main":"하이픽셀플러스 세미나룸","smalls":["경기도 안양시 동안구 벌말로 126, 오비즈타워 302호","🚇 4호선 인덕원역 4번출구 도보 10분","📞 031-450-3515"],"accent":false},{"id":4,"label":"시연장비","type":"text","main":"ATEM Constellation 8K\nATEM 1 M/E Advanced Panel\nATEM Camera Control Panel\nBlackmagic URSA Broadcast G2\nBlackmagic Streaming Encoder 4K\nBlackmagic Streaming Decoder 4K","smalls":[],"accent":false}],"footerContact":"hipixelplus@naver.com / 031-450-3515","formTitle":"참가 신청","formSubtitle":"아래 정보를 입력해 주시면 확인 후 개별 연락드립니다.","noticeItems":["본 교육은 사전 예약제로 운영되며, 사전 예약자에 한해 참석이 가능합니다.","원활한 운영을 위해 참석이 어려우신 경우에는 사전에 예약 취소를 요청드리오니 <BR>협조 부탁드립니다.","건물 주차장 이용 시 주차 지원이 가능합니다."],"benefits":[],"sessions":[{"id":4,"label":"8월 28일 (금) 오후","time":"14:00 – 17:00"}],"fixedFields":[{"id":"name","label":"이름","placeholder":"홍길동"},{"id":"phone","label":"전화번호","placeholder":"010-0000-0000"},{"id":"email","label":"이메일","placeholder":"이메일 주소"},{"id":"company","label":"직장 또는 소속","placeholder":"직장 또는 소속"}],"customFields":[{"id":21,"type":"text","label":"교육 통해 배우시고 싶은 부분이 있나요?","placeholder":"","required":false,"options":[]}],"photoConsentTitle":"사진 및 영상 촬영·활용 동의","photoConsentText":"본 행사는 사진 및 영상 촬영이 진행되며, 촬영된 자료는 Blackmagic Design의 행사 홍보 및 마케팅 목적으로 공식 홈페이지, SNS(Instagram, Facebook 등) 및 기타 홍보자료에 활용될 수 있습니다.","agreeText":"수집된 정보(이름, 연락처, 이메일, 소속)는 세미나 운영 목적으로만 사용되며, 행사 중 촬영된 사진·영상이 SNS 등 온라인 채널에 게시될 수 있습니다.","successTitle":"신청해 주셔서 감사합니다!","successMsg":"검토 후 참가 확정 안내를 입력하신 연락처로 개별 연락드리겠습니다."} -->
+<!-- EDITOR_DATA:{"publishTarget":"atem","registrationSheetId":"","registrationSheetName":"","scriptUrl":"https://script.google.com/macros/s/AKfycbxY_5sluimI4J6-wj8KO7QxQAIweosU23Gx7_iiBQ0mMc55YEoNtVHdQMbj-G-a4wT0KA/exec","bgImage":"https://images.blackmagicdesign.com/images/products/atemconstellation/landing/multiview/multiview-md.jpg?_v=1650498653","bgOpacity":45,"bgSize":200,"bgPosX":100,"bgPosY":0,"registrationStatus":"open","closed":false,"scheduledMsg":"신청 접수 시작 전입니다. 오픈까지 잠시만 기다려주세요.","closedMsg":"🙏 많은 관심 감사합니다! 접수가 마감되었습니다.","maxPerSlot":999,"tagColor":"#b6fc53","tagSize":13,"subColor":"#b6fc53","eyebrowColor":"rgba(255,255,255,0.35)","eyebrowSize":25,"titleColor":"#f5f4f2","titleSize":96,"titleModelsColor":"#ffffff","titleModelsSize":96,"titleSubSize":17,"metaLabelColor":"rgba(255,255,255,0.45)","metaLabelSize":12,"metaValueColor":"#ffffff","metaValueSize":15,"metaSmallColor":"rgba(255,255,255,0.4)","metaSmallSize":13,"descColor":"#ffffff","descSize":14,"footerColor":"rgba(255,255,255,0.4)","footerSize":15,"formTitleSize":25,"formTitleColor":"#f5f4f2","formSubtitleSize":16,"formSubtitleColor":"#ffffff","fieldLabelSize":11,"fieldLabelColor":"rgba(255,255,255,0.5)","fieldInputSize":15,"fieldInputColor":"#f5f4f2","noticeSize":15,"noticeColor":"rgba(255,255,255,0.7)","agreeLabelSize":15,"agreeLabelColor":"#888785","benefitTitleSize":12,"benefitTitleColor":"#f39200","benefitNameSize":15,"benefitNameColor":"#f5f4f2","benefitSubSize":13,"benefitSubColor":"#888785","sessionTitleSize":15,"sessionTitleColor":"#f5f4f2","sessionSubSize":12,"sessionSubColor":"#888785","tabTextSize":14,"tabTextColor":"#f5f4f2","consentTextSize":14,"consentTextColor":"#888785","photoConsentDescSize":13,"photoConsentDescColor":"#b8b7b4","buttonTextSize":15,"buttonTextColor":"#0c0c0d","submitNoteSize":14,"submitNoteColor":"#444342","tag":"스위처를 운용하고 활용하여 스트리밍까지 직접 체험까지","eyebrow":"Blackmagic Design","titleMain":"ATEM &\nSTREAMING\n교육","titleModels":"","titleSub":"라이브 및 스트리밍 중계 무료 교육","desc":"본 세미나는 Blackmagic Design의 ATEM 스위처 시리즈를 중심으로 장비 설정부터 실전 운용까지 체계적으로 \n교육하며, 중계용 카메라와 스트리밍 인코더·디코더 활용법도 함께 다룹니다. 라이브 환경 구축부터 장비 선택까지, 현장의 궁금증을 한 번에 해소할 수 있는 자리입니다.","metaRows":[{"id":1,"label":"일자","type":"text","main":"8월 28일 (금) 오후","smalls":[],"accent":false},{"id":2,"label":"시간","type":"time","showAm":false,"showPm":true,"amTime":"10:00 – 13:00","pmTime":"14:00 – 17:00","smalls":[],"accent":false},{"id":3,"label":"장소","type":"text","main":"하이픽셀플러스 세미나룸","smalls":["경기도 안양시 동안구 벌말로 126, 오비즈타워 302호","🚇 4호선 인덕원역 4번출구 도보 10분","📞 031-450-3515"],"accent":false},{"id":4,"label":"시연장비","type":"text","main":"ATEM Constellation 8K\nATEM 1 M/E Advanced Panel\nATEM Camera Control Panel\nBlackmagic URSA Broadcast G2\nBlackmagic Streaming Encoder 4K\nBlackmagic Streaming Decoder 4K","smalls":[],"accent":false}],"footerContact":"hipixelplus@naver.com / 031-450-3515","formTitle":"참가 신청","formSubtitle":"아래 정보를 입력해 주시면 확인 후 개별 연락드립니다.","noticeItems":["본 교육은 사전 예약제로 운영되며, 사전 예약자에 한해 참석이 가능합니다.","원활한 운영을 위해 참석이 어려우신 경우에는 사전에 예약 취소를 요청드리오니 \u003cBR\u003e협조 부탁드립니다.","건물 주차장 이용 시 주차 지원이 가능합니다."],"benefits":[],"sessions":[{"id":4,"label":"8월 28일 (금) 오후","time":"14:00 – 17:00"}],"fixedFields":[{"id":"name","label":"이름","placeholder":"홍길동"},{"id":"phone","label":"전화번호","placeholder":"010-0000-0000"},{"id":"email","label":"이메일","placeholder":"이메일 주소"},{"id":"company","label":"직장 또는 소속","placeholder":"직장 또는 소속"}],"customFields":[{"id":21,"type":"text","label":"교육 통해 배우시고 싶은 부분이 있나요?","placeholder":"","required":false,"options":[]}],"photoConsentTitle":"사진 및 영상 촬영·활용 동의","photoConsentText":"본 행사는 사진 및 영상 촬영이 진행되며, 촬영된 자료는 Blackmagic Design의 행사 홍보 및 마케팅 목적으로 공식 홈페이지, SNS(Instagram, Facebook 등) 및 기타 홍보자료에 활용될 수 있습니다.","agreeText":"수집된 정보(이름, 연락처, 이메일, 소속)는 세미나 운영 목적으로만 사용되며, 행사 중 촬영된 사진·영상이 SNS 등 온라인 채널에 게시될 수 있습니다.","successTitle":"신청해 주셔서 감사합니다!","successMsg":"검토 후 참가 확정 안내를 입력하신 연락처로 개별 연락드리겠습니다.","attendanceTitle":"참석 여부 확정","attendanceText":"알림톡으로 안내를 받으신 분은 이름과 전화번호로 신청 내역을 찾아주세요. 본인 정보가 맞는지 확인한 후 참석 여부를 선택할 수 있습니다.","attendanceSuccessText":"참석 여부가 정상적으로 저장되었습니다. 응답해 주셔서 감사합니다.","attendanceContactText":"궁금한 점이 있으시면 카카오톡 플러스친구로 문의해주세요.","attendanceContactUrl":"http://pf.kakao.com/_wuWAn","publishPath":"index.html"} -->
 </body>
 </html>
